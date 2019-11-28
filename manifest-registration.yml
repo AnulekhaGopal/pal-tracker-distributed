@@ -5,7 +5,12 @@ applications:
   memory: 256M
   routes:
   - route: registration-pal-anu.cfapps.io
-  path: Applications/RegistrationServer/bin/Release/netcoreapp2.2/publish
+  path: Applications/RegistrationServer/bin/Release/netcoreapp2.2/publish 
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - tracker-registration-database
-  - tracker-service-registry
+  - tracker-service-registry  
+  - tracker-circuit-breaker-dashboard
+  - tracker-amqp
+  - tracker-sso
