@@ -6,7 +6,7 @@ applications:
   routes:
   - route: allocations-pal-anu.cfapps.io
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.2/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-anu.cfapps.io/
+
   services:
   - tracker-allocations-database
+  - tracker-service-registry
